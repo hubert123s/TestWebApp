@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <title>Questions</title>
+</head>
+<body>
+<h1>Questions</h1>
+</div>
+<div th:remove="all-but-first">
+  <div >
+      <form action="/answer" method="post" >
+        <div  th:each="task: ${tasks}" >
+          <h5 th:text="|${task.question}zł|">Treść zadania </h5>
+          <input type="radio" id="${task.answerA}" name="${task.question}" value="${task.answerA}">
+          <label for="${task.answerA}" th:text=" ${task.answerA}"> A</label><br>
+          <input type="radio" id="${task.answerB}" name="${task.question}" value="${task.answerB}">
+          <label for="${task.answerB}" th:text=" ${task.answerB}"> B</label><br>
+          <input type="radio" id="${task.answerC}" name="${task.question}" value="${task.answerC}">
+          <label for="${task.answerC}" th:text=" ${task.answerC}"> C</label><br>
+          <input type="radio" id="${task.answerD}" name="${task.question}" value="${task.answerD}">
+          <label for="${task.answerD}" th:text=" ${task.answerD}"> D</label><br>
+        </div>
+        <button type="submit">Zatwierdz</button>
+
+      </form>
+
+    </div>
+
+  </div>
+
+</div>
+<div>
+
+</div>
+</body>
+</html>

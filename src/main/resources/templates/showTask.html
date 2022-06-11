@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Pytania</title>
+</head>
+<body>
+<h1>Pytania</h1>
+</div>
+<div th:remove="all-but-first">
+    <div >
+        <i class="fas fa-utensils fa-4x"></i>
+        <div class="media-body">
+            <form action="/answer" method="post" >
+                <div class="media col-6 offset-3"  th:each="task: ${tasks}" >
+                    <h5 th:text="|${task.question}zł|">Treść zadania </h5>
+                    <input type="radio" id="${task.answerA}" name="${task.question}" value="${task.answerA}">
+                    <label for="${task.answerA}" th:text=" ${task.answerA}"> I have a bike</label><br>
+                    <input type="radio" id="${task.answerB}" name="${task.question}" value="${task.answerB}">
+                    <label for="${task.answerB}" th:text=" ${task.answerB}"> I have a bike</label><br>
+                    <input type="radio" id="${task.answerC}" name="${task.question}" value="${task.answerC}">
+                    <label for="${task.answerC}" th:text=" ${task.answerC}"> I have a bike</label><br>
+                    <input type="radio" id="${task.answerD}" name="${task.question}" value="${task.answerD}">
+                    <label for="${task.answerD}" th:text=" ${task.answerD}"> I have a bike</label><br>
+                </div>
+                <button type="submit">Zatwierdz</button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</div>
+<div>
+
+</div>
+</body>
+</html>
