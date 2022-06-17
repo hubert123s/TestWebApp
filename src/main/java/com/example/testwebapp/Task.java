@@ -16,6 +16,20 @@ public class Task {
     private String answerD;
     private String correct;
 
+    public Task(String question, String answerA, String answerB, String answerC, String answerD, String correct) {
+        this.id = id;
+        this.question = question;
+        this.answerA = answerA;
+        this.answerB = answerB;
+        this.answerC = answerC;
+        this.answerD = answerD;
+        this.correct = correct;
+    }
+
+    public Task() {
+
+    }
+
     public Long getId() {
         return id;
     }

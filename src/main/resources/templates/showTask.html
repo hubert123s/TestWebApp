@@ -5,15 +5,17 @@
     <title>Pytania</title>
 </head>
 <body>
+<a href="/index.html">Menu</a>
+
 <h1>Pytania</h1>
-</div>
+
 <div th:remove="all-but-first">
     <div >
         <i class="fas fa-utensils fa-4x"></i>
         <div class="media-body">
             <form action="/answer" method="post" >
                 <div class="media col-6 offset-3"  th:each="task: ${tasks}" >
-                    <h5 th:text="|${task.question}zł|">Treść zadania </h5>
+                    <h5 th:text="|${task.question}|">Treść zadania </h5>
                     <input type="radio" id="${task.answerA}" name="${task.question}" value="${task.answerA}">
                     <label for="${task.answerA}" th:text=" ${task.answerA}"> I have a bike</label><br>
                     <input type="radio" id="${task.answerB}" name="${task.question}" value="${task.answerB}">

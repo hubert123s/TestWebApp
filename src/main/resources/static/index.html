@@ -5,14 +5,26 @@
     <title>Title</title>
 </head>
 <body>
-<form method="post" action="/questions">
-    <button type="submit">Questions</button>
-</form>
-<form method="post" action="/addQuestion">
-    <button type="submit">Add Questions</button>
-</form>
+
 <form method="post" action="/showTask">
     <button type="submit">Show Task</button>
     </form>
+<h2>Add question</h2>
+<form action="/save" method="post">
+
+    <input type="text"  name="question" placeholder="Question"><br>
+    <input type="text"  name="answerA"  placeholder="answerA" ><br>
+    <input type="text"  name="answerB"  placeholder="answerB" ><br>
+    <input type="text"  name="answerC"  placeholder="answerC"><br>
+    <input type="text"  name="answerD"  placeholder="answerD"><br>
+    <label for="correct">Choose correct answer</label>
+    <select name="correct" id="correct">
+        <option value="A">A</option>
+        <option value="B">B</option>
+        <option value="C">C</option>
+        <option value="D">D</option>
+    </select>
+    <input type="submit" value="Submit">
+</form>
 </body>
 </html>
